@@ -1,0 +1,35 @@
+-- criar banco de dados 
+create database db_escola;
+
+-- acesso ao banco de dados 	
+use db_escola;
+
+-- cria uma tabela
+create table tb_alunos(
+id bigint(5) auto_increment,
+nome varchar(255) not null,
+idade int not null,
+nota int not null,
+matricola int not null,
+primary key(id)
+)
+
+-- buscar tabela do aluno 
+select * from tb_alunos
+
+-- inserir dados na tabela 
+insert into tb_alunos (nome,idade,nota) values ("zeka",12,8);
+insert into tb_alunos (nome,idade,nota) values ("silas",17,3);
+insert into tb_alunos (nome,idade,nota) values ("margarida",13,7);
+insert into tb_alunos (nome,idade,nota) values ("rufino",11,2);
+insert into tb_alunos (nome,idade,nota) values ("teresa",14,8);
+insert into tb_alunos (nome,idade,nota) values ("junio",16,3);
+insert into tb_alunos (nome,idade,nota) values ("Zé",12,4);
+insert into tb_alunos (nome,idade,nota) values ("Madalena",13,10);
+
+select * from tb_alunos
+-- selecionando produtos maiores que 500
+ select * from tb_alunos where nota >=7 ;
+ 
+ -- selecionando produtos menor que 500
+ select * from tb_alunos where nota < 7 ;
