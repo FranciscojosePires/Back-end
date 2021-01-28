@@ -4,11 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 
 @Entity
@@ -24,11 +26,13 @@ public class Produto {
 	private String nome;
 	
 	@NotNull
-	@Min(0)
+	//@Min(0)
 	private long quantidade;
 
-	
-	
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+	private Categoria categoria;
+
 	public long getId() {
 		return id;
 	}
@@ -52,7 +56,18 @@ public class Produto {
 	public void setQuantidade(long quantidade) {
 		this.quantidade = quantidade;
 	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
+	}
 	
+	
+	
+
 	
 	
 }
