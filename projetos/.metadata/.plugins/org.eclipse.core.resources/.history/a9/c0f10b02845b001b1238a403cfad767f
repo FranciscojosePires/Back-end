@@ -1,5 +1,0 @@
-spring.jpa.hidernate.ddl-auto=update
-spring.datasource.url=jbc:mysql://localhost/blog_pessoal?createDatabaseIfNotExist=true&serverTimezone=UTC&useSSl=false
-spring.datasource.username=root
-spring.datasource.password=654987
-spring.jpa.show-sql=true
