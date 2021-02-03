@@ -57,5 +57,13 @@ public class Usuario {
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
+
+	public void setToken(String authHeader) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
 	
 }

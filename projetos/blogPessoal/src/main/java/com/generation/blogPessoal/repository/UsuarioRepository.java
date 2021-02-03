@@ -1,9 +1,11 @@
 package com.generation.blogPessoal.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import com.generation.blogPessoal.model.Usuario;
-import com.sun.el.stream.Optional;
+
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long >{
-public Optional findByUsuario(String usuario);
+public Optional<Usuario>findByUsuario(String usuario);
 }
